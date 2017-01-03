@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var User      = require('../../models/Users');
+var model      = require('../../models');
+var User = model.User;
 /* GET users listing. */
 // IMPORT ROUTES
 // =============================================================================
