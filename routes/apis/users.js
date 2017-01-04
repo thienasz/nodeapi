@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var model      = require('../../models');
-var User = model.User;
+var User = model.users;
 /* GET users listing. */
 // IMPORT ROUTES
 // =============================================================================
@@ -53,7 +53,7 @@ router.route('/users/:user_id')
       user.password = req.body.password;
 
       user.updateById(req.params.user_id, function(success) {
-        console.log(success);
+        console.error(success);
         if (success) {
           res.json({ message: 'User updated!' });
         } else {
